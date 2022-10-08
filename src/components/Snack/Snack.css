@@ -1,0 +1,53 @@
+.snack {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 20rem;
+  height: 3rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: #e5e5e5;
+  font-weight: 600;
+  background-color: #e36414;
+  animation: snackAnimation 6s;
+  display: none;
+}
+
+.snack.active {
+  display: flex;
+}
+
+@keyframes snackAnimation {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.snack > span {
+  position: absolute;
+  right: 10px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.snack > span:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.error {
+  background-color: red;
+}

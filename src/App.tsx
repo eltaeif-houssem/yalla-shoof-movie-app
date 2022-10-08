@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { AppContext } from "./context";
+import type { contextInterface } from "./@types";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
+// Import pages
+import { HomePage, SignupPage, SigninPage } from "./pages";
 
-function App() {
+// Import components
+import { Navbar } from "./components";
+
+const App: React.FC = () => {
+  const ctx = useContext<contextInterface | null>(AppContext);
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        ctx?.setAuth(true);
+      }
+    });
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <Routes>
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/signin" element={<SigninPage />} />
+        <Route path="/*" element={<HomePage />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

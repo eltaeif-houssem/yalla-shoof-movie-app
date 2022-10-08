@@ -1,0 +1,38 @@
+.row {
+  width: 100%;
+  padding: 0 15px;
+  margin-top: 20px;
+  color: white;
+}
+
+.row > h2 {
+  margin-bottom: 15px;
+}
+
+.row > .row-movies {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+.row > .row-movies::-webkit-scrollbar {
+  width: 0;
+}
+
+.row > .row-movies > .row-movie {
+  width: 200px;
+  height: 180px;
+  margin-right: 15px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.row > .row-movies > .row-movie:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.row > .row-movies > .isLarge {
+  height: 250px;
+}

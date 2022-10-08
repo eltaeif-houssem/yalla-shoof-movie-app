@@ -1,0 +1,38 @@
+.profile {
+  width: 100%;
+  height: 100vh;
+  padding: 4rem;
+}
+
+.profile > .profile-data {
+  margin-top: 150px;
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile > .profile-data > h3 {
+  color: #fca311;
+  margin-bottom: 20px;
+}
+
+.profile > .profile-data > h4 {
+  color: #fff;
+}
+
+.profile > .profile-data > button {
+  margin-top: 20px;
+  width: 20rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fca311;
+  color: #2b2d42;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+
+.profile > .profile-data > button:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
