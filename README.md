@@ -1,4 +1,4 @@
-# yalla shoof movie app by me (eltaeif-houssem)
+# Yalla shoof movie app by me (eltaeif-houssem)
 
 this is a movie streaming web app using react,firebase and typescript and with the amazing
 tmdb-api.
