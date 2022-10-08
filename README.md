@@ -4,7 +4,7 @@ this is a movie streaming web app using react,firebase and typescript and with t
 tmdb-api.
 
 - Clone this project
-- Enter the project and run (yarn | npm install) to install all th required dependencies
+- Enter the project and run (yarn | npm install) to install all the required dependencies
 - Start the project by running (yarn | npm) start
 
 ## You can find the demo of the app at this link : https://yalla-shoof.web.app
