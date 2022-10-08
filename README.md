@@ -7,4 +7,4 @@ tmdb-api.
 - Enter the project and run (yarn | npm install) to install all th required dependencies
 - Start the project by running (yarn | npm) start
 
-## You can find the demo of the app on this link :
+## You can find the demo of the app on this link : https://yalla-shoof.web.app
